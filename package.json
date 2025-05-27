@@ -1,0 +1,46 @@
+{
+  "name": "coc-agent",
+  "version": "0.0.0-development",
+  "description": "Coc extenstion for AI agents",
+  "author": "Michael Polyakov <michellepol33@gmail.com>",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "keywords": [
+    "coc.nvim"
+  ],
+  "engines": {
+    "coc": "^0.0.82"
+  },
+  "scripts": {
+    "watch": "node esbuild.mjs --watch",
+    "build": "node esbuild.mjs",
+    "prepare": "node esbuild.mjs"
+  },
+  "devDependencies": {
+    "coc.nvim": "^0.0.83-next.18",
+    "esbuild": "^0.19.8",
+    "typescript": "^5.3.3"
+  },
+  "activationEvents": [
+    "*"
+  ],
+  "contributes": {
+    "configuration": {
+      "type": "object",
+      "title": "coc-agent configuration",
+      "properties": {
+        "coc-agent.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable coc-agent extension"
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "coc-agent.Command",
+        "title": "coc-agent command title"
+      }
+    ]
+  }
+}
