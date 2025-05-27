@@ -33,6 +33,38 @@
           "type": "boolean",
           "default": true,
           "description": "Enable coc-agent extension"
+        },
+        "coc-agent.openai.apiKey": {
+          "type": "string",
+          "default": "",
+          "description": "OpenAI API key for AI completions"
+        },
+        "coc-agent.openai.baseURL": {
+          "type": "string",
+          "default": "https://api.openai.com/v1",
+          "description": "OpenAI API base URL (for custom endpoints)"
+        },
+        "coc-agent.openai.model": {
+          "type": "string",
+          "default": "gpt-3.5-turbo",
+          "description": "OpenAI model to use for completions"
+        },
+        "coc-agent.openai.maxTokens": {
+          "type": "number",
+          "default": 100,
+          "description": "Maximum tokens for AI completions"
+        },
+        "coc-agent.openai.temperature": {
+          "type": "number",
+          "default": 0.3,
+          "minimum": 0,
+          "maximum": 2,
+          "description": "Temperature for AI completions (0-2)"
+        },
+        "coc-agent.ai.enabled": {
+          "type": "boolean",
+          "default": false,
+          "description": "Enable AI-powered completions"
         }
       }
     },
@@ -40,6 +72,14 @@
       {
         "command": "coc-agent.Command",
         "title": "coc-agent command title"
+      },
+      {
+        "command": "coc-agent.toggleAI",
+        "title": "Toggle AI Completions"
+      },
+      {
+        "command": "coc-agent.configureAI",
+        "title": "Configure AI Settings"
       }
     ]
   }
